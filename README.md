@@ -109,7 +109,7 @@ This insight was derived using:
 KPI Cards that break down sales by channel
 
 **Conclusion:**
-The Competitive Market Analysis Power BI Dashboard successfully brings together key sales data and transforms it into meaningful, interactive visual insights. With the integration of DAX-powered KPI cards, dynamic slicers, and a variety of customized charts—including pie, stacked bar, and line & stacked column charts—the dashboard enables users to:
+The Competitive Market Analysis Power BI Dashboard successfully brings together key sales data and transforms it into meaningful, interactive visual insights. With the integration of DAX-powered KPI cards, dynamic slicers, and a variety of customized charts—including Pie, Clustered Chart, and line & Stacked column charts—the dashboard enables users to:
 
 Monitor and compare performance across different sales channels.
 
