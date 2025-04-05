@@ -12,7 +12,8 @@ Created custom KPI Cards to display the following metrics using DAX formulas:
  ![Sum total card](https://github.com/user-attachments/assets/760f3ffe-e3b4-45b7-84aa-0b1474eed9a8)
 
  **Online Sales**:
- ![Card 1](https://github.com/user-attachments/assets/265263ac-5af4-4b3f-a3ae-e0d85278522a)
+  
+  ![Card 1](https://github.com/user-attachments/assets/265263ac-5af4-4b3f-a3ae-e0d85278522a)
 
  **Outlet Sales:**
 
