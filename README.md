@@ -15,16 +15,20 @@ Created custom KPI Cards to display the following metrics using DAX formulas:
  ![Card 1](https://github.com/user-attachments/assets/265263ac-5af4-4b3f-a3ae-e0d85278522a)
 
  **Outlet Sales:**
+
  ![Outlet sale card](https://github.com/user-attachments/assets/ebb9b550-3ba5-4536-9b52-f0e6e40b820d)
 
  **Social Media Sales:**
-![Social Media Sale](https://github.com/user-attachments/assets/a4051bfc-6c90-4f49-8a15-b3f0843214dd)
+ 
+ ![Social Media Sale](https://github.com/user-attachments/assets/a4051bfc-6c90-4f49-8a15-b3f0843214dd)
 
 **Store Sales:**
-![Store Sale](https://github.com/user-attachments/assets/56b09707-a82d-4d1a-8173-719a819ca8f9)
+ 
+ ![Store Sale](https://github.com/user-attachments/assets/56b09707-a82d-4d1a-8173-719a819ca8f9)
 
 **KPI Cards:**
-![Text and cards](https://github.com/user-attachments/assets/b07a3769-0fb4-4f0a-a799-895287f4abaa)
+ 
+ ![Text and cards](https://github.com/user-attachments/assets/b07a3769-0fb4-4f0a-a799-895287f4abaa)
 
 **Implemented Slicers for dynamic filtering based on:**
 
