@@ -99,6 +99,7 @@ This chart is valuable for identifying seasonal trends and channel-wise performa
 
 ![Model Links](https://github.com/user-attachments/assets/f19fe28d-409d-45dc-98bb-b8a6053d78dd) 
 
+**Arrow Button:**
 Go to the **"Insert" tab** in Power BI Desktop.
 Choose **"Shapes" >** select the right arrow.
 Position it on the right side of the report page.
