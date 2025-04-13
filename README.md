@@ -99,6 +99,38 @@ This chart is valuable for identifying seasonal trends and channel-wise performa
 
 ![Model Links](https://github.com/user-attachments/assets/f19fe28d-409d-45dc-98bb-b8a6053d78dd) 
 
+Go to the **"Insert" tab** in Power BI Desktop.
+Choose **"Shapes" >** select the right arrow.
+Position it on the right side of the report page.
+Select the arrow.
+In the Format pane, toggle **“Action” to On.**
+Set Type to **“Page navigation”**.
+Then choose the destination page from the “Destination” dropdown.
+Press **Ctrl + Click** on the arrow to **test the navigation**.
+
+![Arrow_Key](https://github.com/user-attachments/assets/05e5e3d5-6636-4095-84d8-e50d88c68b6c)
+![Arrow Butto_1](https://github.com/user-attachments/assets/d6bf6b20-e49e-4378-a743-44abafd248a4)
+
+**Table Overview**
+Column Name	Description
+Category	Represents the broader classification of products
+Product	Specifies the name of the individual product.
+City	Indicates the location where the product was sold.
+Unit Sale	Indicates the number of units sold for each product.
+Sum_Total	Displays the total sales value (usually Unit Sale × Price).
+
+![Table](https://github.com/user-attachments/assets/bc719ce5-e7f1-4b9f-8527-c0c84a0ec1f3)
+
+This table provides a detailed view of product sales across different cities and categories, helping in location-wise and product-wise performance analysis.
+
+**Gauge Visuals**
+Used to highlight high-level KPIs at a glance:
+**Total Unit Sale Gauge**
+Displays the overall number of units sold across all cities and products.
+**Total Revenue Gauge (Sum_Total)**
+Shows the total revenue generated from all product sales.
+![Gauge](https://github.com/user-attachments/assets/80558b13-bc82-4e86-8b0a-320e826fda55)
+
 **Best Performing Channel:**
 Based on the visual analysis from the dashboard:
 
