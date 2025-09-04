@@ -1,0 +1,143 @@
+**Seller Path Analysis & Funnel Optimization (Power BI Project)**
+**Project Objective:**
+
+The goal of this project is to analyze the seller enrollment funnel and optimize the journey from Impressions → Clicks → Enrollments.
+This includes:
+
+Funnel performance tracking
+
+Segmentation by Platform, Region, Category, Tenure, Risk Rating
+
+Diagnostics on impression tagging and CTA tagging
+
+Product & Campaign insights
+
+**DataSet**
+**Source:** Seller Enrollment Dataset (25,000 records)
+
+**Key Columns:**
+
+impressions, clicks, enrolled → Funnel metrics
+
+platform, category, region, risk_rating → Segmentation attributes
+
+seller_tenure_months → Seller maturity (segmentation into bands)
+
+impression_tag_valid, optin_cta_tagged → Tagging diagnostics
+
+product_opted, campaign_id → Product & Campaign insights
+
+**Data Preparation (SQL)**
+
+Steps performed before importing into Power BI:
+
+Handle NULLs → Replaced with 0 in numeric columns.
+
+Binary Flags → e.g., clicked_flag, enrolled_flag.
+
+Tenure Segmentation → Created tenure bands:
+
+0–6 months
+
+7–12 months
+
+13–24 months
+
+25+ months
+
+Example:
+SELECT
+    seller_id,
+    COALESCE(impressions,0) as impressions,
+    COALESCE(clicks,0) as clicks,
+    COALESCE(enrolled,0) as enrolled,
+    CASE WHEN clicks > 0 THEN 1 ELSE 0 END as clicked_flag,
+    CASE WHEN enrolled > 0 THEN 1 ELSE 0 END as enrolled_flag,
+    CASE
+        WHEN seller_tenure_months <= 6 THEN '0-6 months'
+        WHEN seller_tenure_months <= 12 THEN '7-12 months'
+        WHEN seller_tenure_months <= 24 THEN '13-24 months'
+        ELSE '25+ months'
+    END as tenure_band
+FROM seller_enrollment_dataset_25k;
+
+
+**Power BI Dashboard**
+
+The dashboard consists of 3 pages:
+
+1 **Funnel Overview**
+
+KPI Cards: Total Impressions, Clicks, Enrollments, CTR
+
+Clustered Column Chart: Impressions → Clicks → Enrolled
+
+Filters: Platform, Region, Category, Tenure
+<img width="729" height="440" alt="page_1" src="https://github.com/user-attachments/assets/09173625-cdbe-42d9-91aa-f6f25fc3aaf3" />
+
+
+2 **Segmentation Insights**
+
+CTR by Platform
+
+CTR by Region
+
+Click-to-Enroll by Risk Rating
+
+Click-to-Enroll by Tenure Band 
+
+<img width="738" height="536" alt="Page_2" src="https://github.com/user-attachments/assets/070cb535-b623-4bfd-9446-cb05def4ff7f" />
+
+
+3 **Tagging Diagnostics & Product Insights**
+
+Valid vs Invalid Impressions
+
+CTA Tagged vs Not Tagged
+
+Product Opted distribution (Subscription, One-Time Fee, Stored Value)
+
+Invalid Impression Rate % 
+
+<img width="853" height="480" alt="Page_3" src="https://github.com/user-attachments/assets/8e81297f-0bd8-431c-9ef7-9640d3f62913" />
+
+**Key DAX Measures**
+
+Impressions = SUM('Cleaned Seller data set sql'[impressions])
+Clicks = SUM('Cleaned Seller data set sql'[clicks])
+Enrolled = SUM('Cleaned Seller data set sql'[enrolled])
+
+CTR = DIVIDE([Clicks],[Impressions],0)
+Click_to_Enroll = DIVIDE([Enrolled],[Clicks],0)
+Impression_to_Enroll = DIVIDE([Enrolled],[Impressions],0)
+
+Invalid_Impressions =
+CALCULATE(
+    SUM('Cleaned Seller data set sql'[impressions]),
+    'Cleaned Seller data set sql'[impression_tag_valid] = "No"
+)
+
+Valid_Impressions =
+CALCULATE(
+    SUM('Cleaned Seller data set sql'[impressions]),
+    'Cleaned Seller data set sql'[impression_tag_valid] = "Yes"
+)
+
+
+Overall CTR = 0.53
+
+Web shows slightly lower CTR compared to Mobile/App.
+
+Sellers with lower risk rating convert better.
+
+~50% of impressions invalid → tagging quality improvement needed.
+
+Subscription is the most opted product.
+
+**Tech Used**
+
+SQL → Data Cleaning & Preprocessing
+
+Power BI → Visualization & DAX
+
+GitHub → Project Documentation & Sharing
