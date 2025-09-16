@@ -1,0 +1,30 @@
+# Marketing Intelligence Dashboard: Scarcity, Conversion & Net Loss Insights
+
+## 📌 About the Project
+This Power BI project analyzes marketing performance. It provides insights into scarcity, conversion rates, disputes, recoveries, and net loss across regions and categories.
+
+Dataset
+- **File**: `marketing_analysis.csv`
+- **Key Columns**: Region, Category, Is_Scarce, Potentially_Scarce, Conversion_Rate, Experience_Score, Dispute_Amount, Win_Amount, Recouped_Amount, Net_Loss.
+
+Steps Performed
+1. Cleaned and transformed data in Power BI.
+2. Created DAX measures for KPIs:
+   - Total Dispute, Total Recovered, Recoup Rate
+   - Scarce Count, Scarce Rate
+   - Avg Conversion Rate, Avg Experience Score
+3. Built dashboards with:
+   - Page 1: KPI Cards + Regional/Category Overview
+   - Page 2: Item-Level & Scarcity Insights
+   - Page 3: Conversion & Experience Analysis
+4. Implemented slicers for Region, Category, and Date (synced across pages).
+
+Key Insights
+- Identified regions with highest Net Loss.
+- Tracked efficiency of dispute recovery (Recoup Rate).
+- Highlighted scarce items and their conversion trends.
+
+Files
+- `Marketing_Intelligence_Dashboard.pbix` → Power BI dashboard file
+- `marketing_analysis.csv` → dataset
+- `README.md` → project documentation
